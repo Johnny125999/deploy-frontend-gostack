@@ -61,8 +61,8 @@ const Input: React.FC<InputProps> = ({
         onBlur={handleInputBlur}
         defaultValue={defaultValue}
         ref={inputRef}
-        {...rest}
         type="text"
+        {...rest}
       />
       {error && (
         <Error title={error}>
