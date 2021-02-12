@@ -3,7 +3,7 @@ import { FiUser, FiMail, FiLock, FiCamera, FiArrowLeft } from 'react-icons/fi';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 import * as Yup from 'yup';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import api from '../../services/api';
 
@@ -30,6 +30,8 @@ const Profile: React.FC = () => {
   const { addToast } = useToast();
 
   const { user, updateUser } = useAuth();
+
+  const history = useHistory();
 
   const handleSubmit = useCallback(
     async (data: ProfileFormData) => {
@@ -82,8 +84,6 @@ const Profile: React.FC = () => {
 
         const response = await api.put('/profile', formData);
 
-        console.log('asd');
-
         updateUser(response.data.user);
 
         addToast({
@@ -92,6 +92,8 @@ const Profile: React.FC = () => {
           description:
             'As informações do seu perfil foram atualizadas com sucesso!',
         });
+
+        history.push('/dashboard');
       } catch (err) {
         if (err instanceof Yup.ValidationError) {
           const errors = getValidationErrors(err);
@@ -108,7 +110,7 @@ const Profile: React.FC = () => {
         });
       }
     },
-    [updateUser, addToast],
+    [updateUser, addToast, history],
   );
 
   const handleAvatarChange = useCallback(
