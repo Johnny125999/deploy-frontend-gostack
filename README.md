@@ -1,4 +1,4 @@
-# deploy-frontend-web
+# deploy-frontend-gostack
 ## Go-Barber é uma aplicação para barbearias, com intuito de facilitar tanto para o cliente quanto para o profissional responsável o agendamento.
 
 [link do deploy](https://www.reactdeploy.celularsr.com.br/)
