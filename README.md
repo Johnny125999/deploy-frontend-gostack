@@ -1,19 +1,15 @@
 # deploy-frontend-gostack
-## Go-Barber é uma aplicação para barbearias, com intuito de facilitar tanto para o cliente quanto para o profissional responsável o agendamento.
+## Go-Barber is an application for barber shops, aiming to facilitate scheduling for both the client and the responsible professional.
 
-[link do deploy](https://www.reactdeploy.celularsr.com.br/)
+### To run the project
+* Clone the project
 
-## Para rodar o projeto
-### Faça o clone do projeto
-### Rode o comando
-> yarn
+* Run the command yarn
 
-### Crie um arquivo .env e coloque os dados de .env.example.json.
+* Create a .env file and add the data from .env.example.json.
 
-### Se quiser navegar pelo projeto livremente, sem rodar o backend exclua o AppProvider de App.tsx.
+* If you want to navigate through the project freely without running the backend, delete the AppProvider from App.tsx.
 
-### Rode o comando em um terminal separado
-> yarn server
+* Run the command in a separate terminal yarn server
 
-### Execute o projeto
-> yarn dev
+* Run the project using the command yarn dev
